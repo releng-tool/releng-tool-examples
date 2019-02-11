@@ -1,0 +1,3 @@
+# locally computed
+sha256 ab15fd526bd8dd18a9e77ebc139656bf4d33e97fc7238cd11bf60e2b9b8666c6 COPYING.txt # LF
+sha256 9f2e250993c6206fac643824e05e5a0d7d3e0895d9e09a5ce4b12bc2610afc11 COPYING.txt # CRLF

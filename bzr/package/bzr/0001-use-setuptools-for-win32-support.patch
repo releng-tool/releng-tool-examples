@@ -1,0 +1,34 @@
+Common subdirectories: bzr-2.7.0/apport and bzr-2.7.0 - Copy/apport
+Common subdirectories: bzr-2.7.0/bzrlib and bzr-2.7.0 - Copy/bzrlib
+Common subdirectories: bzr-2.7.0/contrib and bzr-2.7.0 - Copy/contrib
+Common subdirectories: bzr-2.7.0/doc and bzr-2.7.0 - Copy/doc
+Common subdirectories: bzr-2.7.0/man1 and bzr-2.7.0 - Copy/man1
+Common subdirectories: bzr-2.7.0/po and bzr-2.7.0 - Copy/po
+diff -u bzr-2.7.0/setup.py "bzr-2.7.0 - Copy/setup.py"
+--- bzr-2.7.0/setup.py	2018-11-08 01:13:09.000000000 -0500
++++ "bzr-2.7.0 - Copy/setup.py"	2018-11-14 01:48:44.824793700 -0500
+@@ -104,7 +104,10 @@
+ 
+ 
+ from distutils import log
+-from distutils.core import setup
++try:
++    from setuptools import setup
++except ImportError:
++    from distutils.core import setup
+ from distutils.version import LooseVersion
+ from distutils.command.install_scripts import install_scripts
+ from distutils.command.install_data import install_data
+@@ -181,7 +184,10 @@
+                    }
+ from distutils import log
+ from distutils.errors import CCompilerError, DistutilsPlatformError
+-from distutils.extension import Extension
++try:
++    from setuptools import Extension
++except ImportError:
++    from distutils.extension import Extension
+ ext_modules = []
+ try:
+     try:
+Common subdirectories: bzr-2.7.0/tools and bzr-2.7.0 - Copy/tools
