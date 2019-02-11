@@ -1,0 +1,50 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+LIBCURL_DEPENDENCIES=['libopenssl', 'libzlib']
+LIBCURL_INSTALL_TYPE='staging'
+LIBCURL_LICENSE=['curl']
+LIBCURL_LICENSE_FILES=['COPYING']
+LIBCURL_SITE='https://curl.haxx.se/download/curl-7.61.1.tar.xz'
+LIBCURL_TYPE='autotools'
+LIBCURL_VERSION='7.61.1'
+
+LIBCURL_AUTOTOOLS_CONF_ENV = {
+    'PKG_CONFIG': 'pkg-config --static',
+    'PKG_CONFIG_PATH': STAGING_DIR + '$PREFIX/lib/pkgconfig',
+}
+
+LIBCURL_AUTOTOOLS_CONF_OPTS = [
+    # static only
+    '--disable-shared',
+    # dependencies
+    '--with-ssl',
+    '--with-zlib=' + STAGING_DIR + '$PREFIX',
+    # explicitly disable other ssl implementations
+    '--without-axtls',
+    '--without-cyassl',
+    '--without-gnutls',
+    '--without-libssh',
+    '--without-libssh2',
+    '--without-mbedtls',
+    '--without-nss',
+    '--without-polarssl',
+    '--without-winssl',
+    '--without-wolfssl',
+    # disable libraries not provided in this example
+    '--disable-ldap',
+    '--without-brotli',
+    '--without-gssapi',
+    '--without-libidn2',
+    '--without-libpsl',
+    '--without-librtmp',
+    '--without-nghttp2',
+    # disable extras and miscellaneous
+    '--disable-manual',
+    '--enable-symbol-hiding',
+    '--without-curldebug',
+]
+
+# invoke autoreconf to handle patch:
+# 0001-configure-include-all-libraries-in-ssl-libs-fetch.patch
+LIBCURL_AUTOTOOLS_AUTORECONF = True

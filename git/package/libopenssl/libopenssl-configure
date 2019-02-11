@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+cmd = [
+    './config',
+    # common paths
+    '--libdir=' + PREFIX + '/lib',
+    '--openssldir=/etc/ssl',
+    '--prefix=' + PREFIX,
+    # only build a static library
+    'no-dso',
+    'no-shared',
+    # miscellaneous
+    'no-engine',
+    'no-tests',
+    'no-weak-ssl-ciphers',
+    # zlib compression/decompression support
+    'zlib',
+    '--with-zlib-include=' + STAGING_DIR + PREFIX + '/include',
+]
+
+releng_execute(cmd)

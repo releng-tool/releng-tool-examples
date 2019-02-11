@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+GIT_DEPENDENCIES=[
+    'libcurl',
+    'libexpat',
+    'libopenssl',
+    'libpcre2',
+    'libzlib',
+]
+
+GIT_LICENSE=['GPL-2.0', 'LGPL-2.1+']
+GIT_LICENSE_FILES=['COPYING', 'LGPL-2.1']
+GIT_REVISION='v2.19.1'
+GIT_SITE='https://github.com/git/git.git'
+GIT_TYPE='autotools'
+GIT_VERSION='2.19.1'
+
+GIT_AUTOTOOLS_CONF_ENV = {
+    'CURL_CONFIG': STAGING_DIR + '$PREFIX/bin/curl-config',
+    'ac_cv_lib_curl_curl_global_init': 'yes',
+}
+
+GIT_AUTOTOOLS_CONF_OPTS = [
+    '--libdir=/lib',
+    # dependencies
+    '--with-curl=' + STAGING_DIR + '$PREFIX',
+    '--with-expat=' + STAGING_DIR + '$PREFIX',
+    '--with-libpcre2=' + STAGING_DIR + '$PREFIX',
+    '--with-openssl=' + STAGING_DIR + '$PREFIX',
+    '--with-zlib=' + STAGING_DIR + '$PREFIX',
+    '--without-iconv',
+    '--without-tcltk',
+]
+
+# invoke autoreconf to handle patch:
+# 0001-build-link-with-curl-defined-linker-flags.patch
+GIT_AUTOTOOLS_AUTORECONF = True

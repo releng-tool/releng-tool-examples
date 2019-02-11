@@ -1,0 +1,6 @@
+# locally computed after verification with:
+#  https://github.com/libexpat/libexpat/releases/download/R_2_2_6/expat-2.2.6.tar.bz2.asc
+#  3D7E959D89FACFEE38371921B00BC66A401A1600
+sha256 17b43c2716d521369f82fc2dc70f359860e90fa440bea65b3b85f0b246ea81f2 libexpat-2.2.6.tar.bz2
+# locally computed
+sha256 46336ab2fec900803e2f1a4253e325ac01d998efb09bc6906651f7259e636f76 COPYING

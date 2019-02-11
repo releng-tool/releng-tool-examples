@@ -1,0 +1,60 @@
+From 0f0ee4276e6a6829694c602bebb3201a3428d0a7 Mon Sep 17 00:00:00 2001
+From: James Knight <james.d.knight@live.com>
+Date: Tue, 30 Oct 2018 03:17:44 -0400
+Subject: [PATCH] configure: include all libraries in ssl-libs fetch
+
+When compiling a collection of SSL libraries to link against (SSL_LIBS),
+ensure all libraries are included. The call `--libs-only-l` can produce
+only a subset of found in a `--libs` call (e.x. pthread may be excluded).
+Adding `--libs-only-other` ensures other libraries are also included in
+the list. This corrects select build environments compiling against a
+static version of OpenSSL. Before the change, the following could be
+observed:
+
+    checking for openssl options with pkg-config... found
+    configure: pkg-config: SSL_LIBS: "-lssl -lz -ldl -lcrypto -lz -ldl "
+    configure: pkg-config: SSL_LDFLAGS: "-L/home/jdknight/<workdir>/staging/usr/lib -L/home/jdknight/<workdir>/staging/usr/lib "
+    configure: pkg-config: SSL_CPPFLAGS: "-I/home/jdknight/<workdir>/staging/usr/include "
+    checking for HMAC_Update in -lcrypto... no
+    checking for HMAC_Init_ex in -lcrypto... no
+    checking OpenSSL linking with -ldl... no
+    checking OpenSSL linking with -ldl and -lpthread... no
+    configure: WARNING: SSL disabled, you will not be able to use HTTPS, FTPS, NTLM and more.
+    configure: WARNING: Use --with-ssl, --with-gnutls, --with-polarssl, --with-cyassl, --with-nss, --with-axtls, --with-winssl, or --with-darwinssl to address this.
+    ...
+    SSL support:      no      (--with-{ssl,gnutls,nss,polarssl,mbedtls,cyassl,axtls,winssl,darwinssl} )
+    ...
+
+And include the other libraries when compiling SSL_LIBS succeeds with:
+
+    checking for openssl options with pkg-config... found
+    configure: pkg-config: SSL_LIBS: "-lssl -lz -ldl -pthread -lcrypto -lz -ldl -pthread "
+    configure: pkg-config: SSL_LDFLAGS: "-L/home/jdknight/<workdir>/staging/usr/lib -L/home/jdknight/<workdir>/staging/usr/lib "
+    configure: pkg-config: SSL_CPPFLAGS: "-I/home/jdknight/<workdir>/staging/usr/include "
+    checking for HMAC_Update in -lcrypto... yes
+    checking for SSL_connect in -lssl... yes
+    ...
+    SSL support:      enabled (OpenSSL)
+    ...
+
+Signed-off-by: James Knight <james.d.knight@live.com>
+---
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 8a7dd6a14..c1f1bdf69 100755
+--- a/configure.ac
++++ b/configure.ac
+@@ -1623,7 +1623,7 @@ if test -z "$ssl_backends" -o "x$OPT_SSL" != xno &&
+ 
+     if test "$PKGCONFIG" != "no" ; then
+       SSL_LIBS=`CURL_EXPORT_PCDIR([$OPENSSL_PCDIR]) dnl
+-        $PKGCONFIG --libs-only-l openssl 2>/dev/null`
++        $PKGCONFIG --libs-only-l --libs-only-other openssl 2>/dev/null`
+ 
+       SSL_LDFLAGS=`CURL_EXPORT_PCDIR([$OPENSSL_PCDIR]) dnl
+         $PKGCONFIG --libs-only-L openssl 2>/dev/null`
+-- 
+2.19.1.windows.1
+

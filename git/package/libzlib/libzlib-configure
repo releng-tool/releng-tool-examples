@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+cmd = [
+    './configure',
+    # common paths
+    '--prefix=' + PREFIX,
+    # only build the static library
+    '--static',
+]
+
+releng_execute(cmd)
