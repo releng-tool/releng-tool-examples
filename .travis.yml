@@ -1,0 +1,23 @@
+language: generic
+
+matrix:
+  fast_finish: false
+  include:
+  - os: linux
+    env: ROOT_DIR=minimal
+  - os: osx
+    env: ROOT_DIR=minimal
+  - os: windows
+    env: ROOT_DIR=minimal
+
+install:
+  - pip install git+https://github.com/releng-tool/releng-tool.git
+
+before_script:
+  - env | sort
+
+script:
+  - releng-tool --root-dir $ROOT_DIR
+
+after_script:
+  - find $ROOT_DIR/output/target 2>/dev/null
