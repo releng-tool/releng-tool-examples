@@ -1,5 +1,6 @@
 language: generic
 
+# minimal example
 matrix:
   fast_finish: false
   include:
@@ -7,11 +8,14 @@ matrix:
     env: ROOT_DIR=minimal
   - os: osx
     env: ROOT_DIR=minimal
+
+matrix:
+  allow_failures:
   - os: windows
     env: ROOT_DIR=minimal
 
 install:
-  - pip install git+https://github.com/releng-tool/releng-tool.git
+  - pip install --user git+https://github.com/releng-tool/releng-tool.git
 
 before_script:
   - env | sort
