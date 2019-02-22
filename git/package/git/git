@@ -16,12 +16,12 @@ GIT_SITE='https://github.com/git/git.git'
 GIT_TYPE='autotools'
 GIT_VERSION='2.19.1'
 
-GIT_AUTOTOOLS_CONF_ENV = {
+GIT_CONF_ENV = {
     'CURL_CONFIG': STAGING_DIR + '$PREFIX/bin/curl-config',
     'ac_cv_lib_curl_curl_global_init': 'yes',
 }
 
-GIT_AUTOTOOLS_CONF_OPTS = [
+GIT_CONF_OPTS = [
     '--libdir=/lib',
     # dependencies
     '--with-curl=' + STAGING_DIR + '$PREFIX',

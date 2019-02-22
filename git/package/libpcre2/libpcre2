@@ -8,7 +8,7 @@ LIBPCRE2_SITE='https://ftp.pcre.org/pub/pcre/pcre2-10.32.tar.gz'
 LIBPCRE2_TYPE='autotools'
 LIBPCRE2_VERSION='10.32'
 
-LIBPCRE2_AUTOTOOLS_CONF_OPTS = [
+LIBPCRE2_CONF_OPTS = [
     # static only
     '--disable-shared',
 ]
