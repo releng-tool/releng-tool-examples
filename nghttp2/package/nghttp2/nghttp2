@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+NGHTTP2_DEPENDENCIES = [
+    'libcares',
+    'libev',
+    'libjemalloc',
+    'libopenssl',
+    'libxml2',
+    'libzlib',
+]
+NGHTTP2_LICENSE = ['MIT']
+NGHTTP2_LICENSE_FILES = ['COPYING']
+NGHTTP2_REVISION = 'v1.36.0'
+NGHTTP2_SITE = 'https://github.com/nghttp2/nghttp2.git'
+NGHTTP2_TYPE = 'cmake'
+NGHTTP2_VERSION = '1.36.0'
+
+NGHTTP2_CONF_DEFS = {
+    # build application (no examples)
+    'ENABLE_APP': 'ON',
+    'ENABLE_EXAMPLES': 'OFF',
+    # static only library
+    'ENABLE_SHARED_LIB': 'OFF',
+    # explicitly disable select features
+    'WITH_SPDYLAY': 'OFF',
+    'WITH_MRUBY': 'OFF',
+}

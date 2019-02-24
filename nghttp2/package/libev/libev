@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+LIBEV_INSTALL_TYPE = 'staging'
+LIBEV_LICENSE = ['BSD-2-Clause', 'GPL-2.0+']
+LIBEV_LICENSE_FILES = ['LICENSE']
+LIBEV_SITE = 'http://dist.schmorp.de/libev/libev-4.25.tar.gz'
+LIBEV_TYPE = 'autotools'
+LIBEV_VERSION = '4.25'
+
+LIBEV_CONF_OPTS = [
+    # static only
+    '--disable-shared',
+]

@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+LIBXML2_DEPENDENCIES = ['libzlib']
+LIBXML2_INSTALL_TYPE = 'staging'
+LIBXML2_LICENSE = ['MIT']
+LIBXML2_LICENSE_FILES = ['COPYING']
+LIBXML2_SITE = 'ftp://xmlsoft.org/libxml2/libxml2-2.9.9.tar.gz'
+LIBXML2_TYPE = 'autotools'
+LIBXML2_VERSION = '2.9.9'
+
+LIBXML2_CONF_OPTS = [
+    # static only
+    '--disable-shared',
+    # dependencies
+    '--with-zlib=' + STAGING_DIR + '$PREFIX',
+    # disable features
+    '--without-coverage',
+    '--without-debug',
+    '--without-iconv',
+    '--without-lzma',
+    '--without-python',
+]

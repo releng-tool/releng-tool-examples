@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+LIBCARES_INSTALL_TYPE = 'staging'
+LIBCARES_LICENSE = ['MIT']
+LIBCARES_LICENSE_FILES = ['LICENSE.md']
+LIBCARES_SITE = 'https://c-ares.haxx.se/download/c-ares-1.15.0.tar.gz'
+LIBCARES_TYPE = 'cmake'
+LIBCARES_VERSION = '1.15.0'
+
+LIBCARES_CONF_DEFS = {
+    # static only
+    'CARES_SHARED': 'OFF',
+    'CARES_STATIC': 'ON',
+    # disable tools
+    'CARES_BUILD_TOOLS': 'OFF',
+}
