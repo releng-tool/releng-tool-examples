@@ -81,6 +81,16 @@ matrix:
         - virtualenv venv -p python
         - source venv/bin/activate
 
+    # nghttp2 example
+    - os: linux
+      env: ROOT_DIR=nghttp2
+      language: generic
+      dist: xenial
+      before_install:
+        - sudo python -m pip install --upgrade pip wheel virtualenv
+        - virtualenv venv -p python
+        - source venv/bin/activate
+
 install:
   - pip install git+https://github.com/releng-tool/releng-tool.git
 
