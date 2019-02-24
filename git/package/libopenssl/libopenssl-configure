@@ -17,6 +17,7 @@ cmd = [
     # zlib compression/decompression support
     'zlib',
     '--with-zlib-include=' + STAGING_DIR + PREFIX + '/include',
+    '--with-zlib-lib=' + STAGING_DIR + PREFIX + '/lib',
 ]
 
 releng_execute(cmd)
