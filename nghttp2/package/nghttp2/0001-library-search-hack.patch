@@ -1,0 +1,25 @@
+[PATCH] library search hack
+
+Tweak the nghttp2 application build to find the nghttp2 library
+(generated from a libnghttp2 build) instead of expecting the library to
+be in the default library path.
+
+Signed-off-by: James Knight <james.d.knight@live.com>
+
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index f33f4bff..9a2551b4 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -21,9 +21,11 @@ include_directories(
+   ${ZLIB_INCLUDE_DIRS}
+ )
+ 
++find_library(NGHTTP2_LIBRARY NAMES nghttp2)
++
+ # XXX per-target?
+ link_libraries(
+-  nghttp2
++  ${NGHTTP2_LIBRARY}
+   ${JEMALLOC_LIBRARIES}
+   ${SPDYLAY_LIBRARIES}
+   ${LIBXML2_LIBRARIES}

@@ -2,12 +2,7 @@
 # -*- coding: utf-8 -*-
 
 NGHTTP2_DEPENDENCIES = [
-    'libcares',
-    'libev',
-    'libjemalloc',
-    'libopenssl',
-    'libxml2',
-    'libzlib',
+    'libnghttp2',
 ]
 NGHTTP2_LICENSE = ['MIT']
 NGHTTP2_LICENSE_FILES = ['COPYING']
@@ -20,7 +15,8 @@ NGHTTP2_CONF_DEFS = {
     # build application (no examples)
     'ENABLE_APP': 'ON',
     'ENABLE_EXAMPLES': 'OFF',
-    # static only library
+    # no library
+    'ENABLE_STATIC_LIB': 'OFF',
     'ENABLE_SHARED_LIB': 'OFF',
     # explicitly disable select features
     'WITH_SPDYLAY': 'OFF',
