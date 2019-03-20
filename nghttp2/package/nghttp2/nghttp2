@@ -6,10 +6,10 @@ NGHTTP2_DEPENDENCIES = [
 ]
 NGHTTP2_LICENSE = ['MIT']
 NGHTTP2_LICENSE_FILES = ['COPYING']
-NGHTTP2_REVISION = 'v1.36.0'
+NGHTTP2_REVISION = 'v1.37.0'
 NGHTTP2_SITE = 'https://github.com/nghttp2/nghttp2.git'
 NGHTTP2_TYPE = 'cmake'
-NGHTTP2_VERSION = '1.36.0'
+NGHTTP2_VERSION = '1.37.0'
 
 NGHTTP2_CONF_DEFS = {
     # build application (no examples)
