@@ -104,7 +104,8 @@ script:
         --root-dir $ROOT_DIR \
         --cache-dir $HOME/releng-tool-cache \
         --dl-dir $HOME/releng-tool-dl \
-        --debug
+        --debug \
+        --jobs 1
 
 after_script:
   - find $ROOT_DIR/output/target 2>/dev/null
