@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-LIBEXPAT_INSTALL_TYPE='staging'
-LIBEXPAT_LICENSE=['MIT']
-LIBEXPAT_LICENSE_FILES=['COPYING']
-LIBEXPAT_SITE='https://github.com/libexpat/libexpat/releases/download/R_2_2_6/expat-2.2.6.tar.bz2'
-LIBEXPAT_TYPE='autotools'
-LIBEXPAT_VERSION='2.2.6'
+LIBEXPAT_INSTALL_TYPE = 'staging'
+LIBEXPAT_LICENSE = ['MIT']
+LIBEXPAT_LICENSE_FILES = ['COPYING']
+LIBEXPAT_SITE = 'https://github.com/libexpat/libexpat/releases/download/R_2_2_6/expat-2.2.6.tar.bz2'
+LIBEXPAT_TYPE = 'autotools'
+LIBEXPAT_VERSION = '2.2.6'
 
 LIBEXPAT_CONF_OPTS = [
     # static only

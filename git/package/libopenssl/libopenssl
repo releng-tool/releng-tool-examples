@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-LIBOPENSSL_DEPENDENCIES=['libzlib']
-LIBOPENSSL_LICENSE=['OpenSSL', 'SSLeay']
-LIBOPENSSL_LICENSE_FILES=['LICENSE']
-LIBOPENSSL_SITE='https://www.openssl.org/source/openssl-1.1.1.tar.gz'
-LIBOPENSSL_VERSION='1.1.1'
+LIBOPENSSL_DEPENDENCIES = ['libzlib']
+LIBOPENSSL_LICENSE = ['OpenSSL', 'SSLeay']
+LIBOPENSSL_LICENSE_FILES = ['LICENSE']
+LIBOPENSSL_SITE = 'https://www.openssl.org/source/openssl-1.1.1.tar.gz'
+LIBOPENSSL_VERSION = '1.1.1'

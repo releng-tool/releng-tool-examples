@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-LIBCURL_DEPENDENCIES=['libopenssl', 'libzlib']
-LIBCURL_INSTALL_TYPE='staging'
-LIBCURL_LICENSE=['curl']
-LIBCURL_LICENSE_FILES=['COPYING']
-LIBCURL_SITE='https://curl.haxx.se/download/curl-7.61.1.tar.xz'
-LIBCURL_TYPE='autotools'
-LIBCURL_VERSION='7.61.1'
+LIBCURL_DEPENDENCIES = ['libopenssl', 'libzlib']
+LIBCURL_INSTALL_TYPE = 'staging'
+LIBCURL_LICENSE = ['curl']
+LIBCURL_LICENSE_FILES = ['COPYING']
+LIBCURL_SITE = 'https://curl.haxx.se/download/curl-7.61.1.tar.xz'
+LIBCURL_TYPE = 'autotools'
+LIBCURL_VERSION = '7.61.1'
 
 LIBCURL_CONF_ENV = {
     'PKG_CONFIG': 'pkg-config --static',
