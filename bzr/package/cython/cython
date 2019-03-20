@@ -3,13 +3,13 @@
 
 import sys
 
-CYTHON_LICENSE=['Apache-2.0']
-CYTHON_LICENSE_FILES=['LICENSE.txt']
-CYTHON_SITE='https://github.com/cython/cython.git'
-CYTHON_TYPE='python'
-CYTHON_VERSION='0.29'
+CYTHON_LICENSE = ['Apache-2.0']
+CYTHON_LICENSE_FILES = ['LICENSE.txt']
+CYTHON_SITE = 'https://github.com/cython/cython.git'
+CYTHON_TYPE = 'python'
+CYTHON_VERSION = '0.29'
 
 if sys.platform != 'win32':
-    CYTHON_PYTHON_INTERPRETER='python2.7'
+    CYTHON_PYTHON_INTERPRETER = 'python2.7'
 else:
-    CYTHON_PYTHON_INTERPRETER='C:\Python27\python'
+    CYTHON_PYTHON_INTERPRETER = 'C:\Python27\python'
