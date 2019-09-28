@@ -85,7 +85,7 @@ matrix:
     - os: linux
       env: ROOT_DIR=nghttp2
       language: generic
-      dist: xenial
+      dist: bionic
       before_install:
         - sudo python -m pip install --upgrade pip wheel virtualenv
         - virtualenv venv -p python
