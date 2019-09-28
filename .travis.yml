@@ -50,7 +50,7 @@ matrix:
         - export PATH="/c/Python27:/c/Python27/Scripts:$PATH"
         - python -m pip install --upgrade pip wheel virtualenv
         - virtualenv venv
-        - venv/Scripts/activate
+        - venv/Scripts/activate.bat
     - os: windows
       env: ROOT_DIR=minimal
       language: sh
@@ -59,7 +59,7 @@ matrix:
         - export PATH="/c/Python37:/c/Python37/Scripts:$PATH"
         - python -m pip install --upgrade pip wheel virtualenv
         - virtualenv venv
-        - venv/Scripts/activate
+        - venv/Scripts/activate.bat
 
     # bzr example
     - os: linux
