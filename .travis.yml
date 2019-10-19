@@ -20,7 +20,7 @@ matrix:
       env: ROOT_DIR=vulkan-samples
       language: cpp
       before_install:
-        - choco install python3 --params "/InstallDir:C:\Python"`
+        - choco install python3 --params "/InstallDir:C:\Python"
         - export PATH="/c/Python:/c/Python/Scripts:$PATH"
         - python -m pip install --upgrade pip wheel virtualenv
         - virtualenv venv
