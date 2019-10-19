@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+KHRONOS_GLSLANG_DEVMODE_REVISION = 'master'
+KHRONOS_GLSLANG_INSTALL_TYPE = 'staging'
+KHRONOS_GLSLANG_LICENSE = ['BSD', 'NVIDIA-preprocessor']
+KHRONOS_GLSLANG_LICENSE_FILES = ['LICENSE.txt']
+KHRONOS_GLSLANG_SITE = 'https://github.com/KhronosGroup/glslang.git'
+KHRONOS_GLSLANG_TYPE = 'cmake'
+KHRONOS_GLSLANG_VERSION = '7.12.3352'
+
+KHRONOS_GLSLANG_CONF_DEFS = {
+    'SPIRV-Headers_SOURCE_DIR': STAGING_DIR + PREFIX,
+}
