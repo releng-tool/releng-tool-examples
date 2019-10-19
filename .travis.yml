@@ -12,7 +12,7 @@ matrix:
       language: generic
       dist: bionic
       before_install:
-        - sudo apt-get libwayland-dev
+        - sudo apt-get install libwayland-dev
         - sudo python -m pip install --upgrade pip wheel virtualenv
         - virtualenv venv -p python
         - source venv/bin/activate
@@ -20,6 +20,7 @@ matrix:
       env: ROOT_DIR=vulkan-samples
       language: cpp
       before_install:
+        - choco install windowsdriverkit10
         - choco install python3 --params "/InstallDir:C:\Python"
         - export PATH="/c/Python:/c/Python/Scripts:$PATH"
         - python -m pip install --upgrade pip wheel virtualenv
