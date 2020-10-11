@@ -4,3 +4,6 @@
 packages = [
     'vulkan-samples',
 ]
+
+# project variable (shared with `releng-post`)
+EXAMPLE_VERSION = '0.1.0'
