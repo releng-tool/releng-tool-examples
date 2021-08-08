@@ -30,8 +30,8 @@ jobs:
             - { os: windows-latest, python: 3.9, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
 
             # bzr example
-            - { os:  ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
-            - { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
+            #- { os:  ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
+            #- { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
 
             # git example
             #- { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
@@ -61,8 +61,14 @@ jobs:
             $HOME/releng-tool-dl
         key: ${{ matrix.os }}-${{ matrix.python }}-pip-
 
-    - name: Install dependencies
+    - name: Install dependencies (Python)
       run: python -m pip install --upgrade pip wheel
+    - name: Install dependencies (bzr; ubuntu-latest)
+      run: sudo apt-get install git
+      if: matrix.root_dir == 'ubuntu-latest' && matrix.root_dir == 'bzr'
+    - name: Install dependencies (bzr; windows-latest)
+      run: brew install ninja
+      if: matrix.root_dir == 'windows-latest' && matrix.root_dir == 'bzr'
 
     - name: Install releng-tool
       run: python -m pip install git+https://github.com/releng-tool/releng-tool.git
