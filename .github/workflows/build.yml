@@ -33,10 +33,10 @@ jobs:
             #- { os: ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
 
             # git example
-            - { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
+            #- { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
 
             # nghttp2 example
-            #- { os: ubuntu-latest, python: 3.9, root_dir: nghttp2, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, python: 3.9, root_dir: nghttp2, cache: ~/.cache/pip }
 
             # vulkan-samples example
             #- { os:  ubuntu-latest, python: 3.9, root_dir: vulkan-samples, cache: ~/.cache/pip }
