@@ -1,8 +1,8 @@
 releng-tool examples
 ====================
 
-.. image:: https://travis-ci.com/releng-tool/releng-tool-examples.svg?branch=master
-    :target: https://travis-ci.com/releng-tool/releng-tool-examples
+.. image:: https://github.com/releng-tool/releng-tool-examples/workflows/build/badge.svg?branch=master
+    :target: https://github.com/releng-tool/releng-tool-examples/actions?query=workflow%3Abuild
     :alt: Build Status
 
 This repository holds a series of examples releng-tool projects to serve as a
