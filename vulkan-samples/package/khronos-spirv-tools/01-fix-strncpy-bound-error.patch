@@ -1,0 +1,22 @@
+From eeff9af1e6e178de60b9e3adf7e0f2f0d655473f Mon Sep 17 00:00:00 2001
+From: John Zupin <johnzupin@gmail.com>
+Date: Tue, 29 Jun 2021 08:07:13 -0600
+Subject: [PATCH] fix strncpy bound error (#4331)
+
+---
+ source/diagnostic.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/source/diagnostic.cpp b/source/diagnostic.cpp
+index edc27c8fd9..f3aa259431 100644
+--- a/source/diagnostic.cpp
++++ b/source/diagnostic.cpp
+@@ -37,7 +37,7 @@ spv_diagnostic spvDiagnosticCreate(const spv_position position,
+   diagnostic->position = *position;
+   diagnostic->isTextSource = false;
+   memset(diagnostic->error, 0, length);
+-  strncpy(diagnostic->error, message, length);
++  strcpy(diagnostic->error, message);
+   return diagnostic;
+ }
+ 
