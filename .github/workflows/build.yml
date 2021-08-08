@@ -24,24 +24,24 @@ jobs:
             - { os: ubuntu-latest, python: 3.9, root_dir: minimal, cache: ~/.cache/pip }
 
             # minimal examples on additional operating systems
-            - { os:   macos-latest, python: 2.7, root_dir: minimal, cache: ~/Library/Caches/pip }
-            - { os:   macos-latest, python: 3.9, root_dir: minimal, cache: ~/Library/Caches/pip }
-            - { os: windows-latest, python: 2.7, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
-            - { os: windows-latest, python: 3.9, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
+            #- { os:   macos-latest, python: 2.7, root_dir: minimal, cache: ~/Library/Caches/pip }
+            #- { os:   macos-latest, python: 3.9, root_dir: minimal, cache: ~/Library/Caches/pip }
+            #- { os: windows-latest, python: 2.7, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
+            #- { os: windows-latest, python: 3.9, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
 
             # bzr example
-            - { os:  ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
-            - { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
+            #- { os:  ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
+            #- { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
 
             # git example
-            - { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
+            #- { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
 
             # nghttp2 example
-            - { os: ubuntu-latest, python: 3.9, root_dir: nghttp2, cache: ~/.cache/pip }
+            #- { os: ubuntu-latest, python: 3.9, root_dir: nghttp2, cache: ~/.cache/pip }
 
             # vulkan-samples example
-            - { os:  ubuntu-latest, python: 3.9, root_dir: vulkan-samples, cache: ~/.cache/pip }
-            - { os: windows-latest, python: 3.9, root_dir: vulkan-samples, cache: ~\AppData\Local\pip\Cache }
+            #- { os:  ubuntu-latest, python: 3.9, root_dir: vulkan-samples, cache: ~/.cache/pip }
+            #- { os: windows-latest, python: 3.9, root_dir: vulkan-samples, cache: ~\AppData\Local\pip\Cache }
 
     steps:
     - uses: actions/checkout@v2
@@ -83,5 +83,5 @@ jobs:
 
     - name: Dump of output
       run: |
-        find ${{ matrix.root_dir }}/output/target 2>/dev/null
-        find ${{ matrix.root_dir }}/output/images 2>/dev/null
+        find ${{ matrix.root_dir }}/output/target 2>/dev/null || true
+        find ${{ matrix.root_dir }}/output/images 2>/dev/null || true
