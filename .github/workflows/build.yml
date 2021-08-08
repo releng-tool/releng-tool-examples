@@ -30,8 +30,8 @@ jobs:
             #- { os: windows-latest, python: 3.9, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
 
             # bzr example
-            - { os:  ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
-            #- { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
+            #- { os:  ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
+            - { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
 
             # git example
             #- { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
