@@ -1,0 +1,113 @@
+name: build
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+            # minimal examples on each python interpreter
+            - { os: ubuntu-latest, python: 2.7, root_dir: minimal, cache: ~/.cache/pip }
+            - { os:  ubuntu-18.04, python: 3.4, root_dir: minimal, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, python: 3.5, root_dir: minimal, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, python: 3.6, root_dir: minimal, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, python: 3.7, root_dir: minimal, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, python: 3.8, root_dir: minimal, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, python: 3.9, root_dir: minimal, cache: ~/.cache/pip }
+
+            # minimal examples on additional operating systems
+            - { os:   macos-latest, python: 2.7, root_dir: minimal, cache: ~/Library/Caches/pip }
+            - { os:   macos-latest, python: 3.9, root_dir: minimal, cache: ~/Library/Caches/pip }
+            - { os: windows-latest, python: 2.7, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
+            - { os: windows-latest, python: 3.9, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
+
+            # bzr example
+            - { os: ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
+
+            # git example
+            - { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
+
+            # nghttp2 example
+            - { os: ubuntu-latest, python: 3.9, root_dir: nghttp2, cache: ~/.cache/pip }
+
+            # vulkan-samples example
+            - { os:  ubuntu-latest, python: 3.9, root_dir: vulkan-samples, cache: ~/.cache/pip }
+            - { os: windows-latest, python: 3.9, root_dir: vulkan-samples, cache: ~\AppData\Local\pip\Cache }
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python ${{ matrix.python }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python }}
+
+    - name: Cache
+      uses: actions/cache@v2
+      id: cache-pip
+      with:
+        path: |
+            ${{ matrix.cache }}
+            $HOME/releng-tool-cache
+            $HOME/releng-tool-dl
+        key: ${{ matrix.os }}-${{ matrix.python }}-pip-
+
+    # dependencies
+    - name: Install dependencies (Python)
+      run: python -m pip install --upgrade pip wheel
+    # dependencies (bzr)
+    - name: Install dependencies (bzr; ubuntu-latest)
+      run: >
+        sudo apt-get install
+        bzr
+        python-dev
+      if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'bzr'
+    # dependencies (git)
+    - name: Install dependencies (git; ubuntu-latest)
+      run: >
+        sudo apt-get install
+        gettext
+      if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'git'
+    # dependencies (vulkan-samples)
+    - name: Install dependencies (vulkan-samples; ubuntu-latest)
+      run: >
+        sudo apt-get install
+        libwayland-dev
+      if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'vulkan-samples'
+
+    - name: Install releng-tool
+      run: python -m pip install git+https://github.com/releng-tool/releng-tool.git
+
+    - name: State information
+      run: |
+        python --version
+        env | sort
+
+    - name: Build test
+      run: >
+        releng-tool
+        --root-dir ${{ matrix.root_dir }}
+        --cache-dir $HOME/releng-tool-cache
+        --dl-dir $HOME/releng-tool-dl
+        --debug
+        --jobs 1
+
+    - name: Dump of output
+      run: |
+        find ${{ matrix.root_dir }}/output/target 2>/dev/null || true
+        find ${{ matrix.root_dir }}/output/images 2>/dev/null || true
+      if: matrix.os != 'windows-latest'
+
+    - name: Dump of output
+      run: |
+        Get-ChildItem ${{ matrix.root_dir }}/output/target -recurse | foreach fullname
+        Get-ChildItem ${{ matrix.root_dir }}/output/target -recurse | foreach fullname
+      if: matrix.os == 'windows-latest'
