@@ -24,14 +24,14 @@ jobs:
             #- { os: ubuntu-latest, python: 3.9, root_dir: minimal, cache: ~/.cache/pip }
 
             # minimal examples on additional operating systems
-            - { os:   macos-latest, python: 2.7, root_dir: minimal, cache: ~/Library/Caches/pip }
-            - { os:   macos-latest, python: 3.9, root_dir: minimal, cache: ~/Library/Caches/pip }
-            - { os: windows-latest, python: 2.7, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
-            - { os: windows-latest, python: 3.9, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
+            #- { os:   macos-latest, python: 2.7, root_dir: minimal, cache: ~/Library/Caches/pip }
+            #- { os:   macos-latest, python: 3.9, root_dir: minimal, cache: ~/Library/Caches/pip }
+            #- { os: windows-latest, python: 2.7, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
+            #- { os: windows-latest, python: 3.9, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
 
             # bzr example
-            #- { os:  ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
-            #- { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
+            - { os:  ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
+            - { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
 
             # git example
             #- { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
