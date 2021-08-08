@@ -80,11 +80,11 @@ jobs:
 
     - name: Build test
       run: |
-        releng-tool \
-            --root-dir ${{ matrix.root_dir }} \
-            --cache-dir $HOME/releng-tool-cache \
-            --dl-dir $HOME/releng-tool-dl \
-            --debug \
+        releng-tool >
+            --root-dir ${{ matrix.root_dir }}
+            --cache-dir $HOME/releng-tool-cache
+            --dl-dir $HOME/releng-tool-dl
+            --debug
             --jobs 1
 
     - name: Dump of output
