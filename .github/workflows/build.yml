@@ -31,10 +31,10 @@ jobs:
 
             # bzr example
             #- { os:  ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
-            - { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
+            #- { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
 
             # git example
-            #- { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
 
             # nghttp2 example
             #- { os: ubuntu-latest, python: 3.9, root_dir: nghttp2, cache: ~/.cache/pip }
