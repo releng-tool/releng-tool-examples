@@ -31,7 +31,7 @@ jobs:
 
             # bzr example
             - { os:  ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
-            - { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
+            #- { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
 
             # git example
             #- { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
@@ -64,10 +64,10 @@ jobs:
     - name: Install dependencies (Python)
       run: python -m pip install --upgrade pip wheel
     - name: Install dependencies (bzr; ubuntu-latest)
-      run: sudo apt-get install git
+      run: sudo apt-get install bzr
       if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'bzr'
     - name: Install dependencies (bzr; windows-latest)
-      run: brew install ninja
+      run: choco install bzr
       if: matrix.os == 'windows-latest' && matrix.root_dir == 'bzr'
 
     - name: Install releng-tool
