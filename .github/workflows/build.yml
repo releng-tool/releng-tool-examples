@@ -71,8 +71,10 @@ jobs:
       if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'bzr'
     - name: Install dependencies (bzr; windows-latest)
       run: |
-        choco install bzr
-        refreshenv
+        choco install bzr python2
+        echo ${env:ProgramFiles(x86)}\Bazaar >>$env:GITHUB_PATH
+        echo C:\Python27 >>$env:GITHUB_PATH
+        echo C:\Python27\Scripts >>$env:GITHUB_PATH
       if: matrix.os == 'windows-latest' && matrix.root_dir == 'bzr'
 
     - name: Install releng-tool
