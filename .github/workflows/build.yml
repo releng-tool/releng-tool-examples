@@ -15,23 +15,23 @@ jobs:
       matrix:
         include:
             # minimal examples on each python interpreter
-            - { os: ubuntu-latest, python: 2.7, root_dir: minimal, cache: ~/.cache/pip }
-            - { os:  ubuntu-18.04, python: 3.4, root_dir: minimal, cache: ~/.cache/pip }
-            - { os: ubuntu-latest, python: 3.5, root_dir: minimal, cache: ~/.cache/pip }
-            - { os: ubuntu-latest, python: 3.6, root_dir: minimal, cache: ~/.cache/pip }
-            - { os: ubuntu-latest, python: 3.7, root_dir: minimal, cache: ~/.cache/pip }
-            - { os: ubuntu-latest, python: 3.8, root_dir: minimal, cache: ~/.cache/pip }
-            - { os: ubuntu-latest, python: 3.9, root_dir: minimal, cache: ~/.cache/pip }
+            #- { os: ubuntu-latest, python: 2.7, root_dir: minimal, cache: ~/.cache/pip }
+            #- { os:  ubuntu-18.04, python: 3.4, root_dir: minimal, cache: ~/.cache/pip }
+            #- { os: ubuntu-latest, python: 3.5, root_dir: minimal, cache: ~/.cache/pip }
+            #- { os: ubuntu-latest, python: 3.6, root_dir: minimal, cache: ~/.cache/pip }
+            #- { os: ubuntu-latest, python: 3.7, root_dir: minimal, cache: ~/.cache/pip }
+            #- { os: ubuntu-latest, python: 3.8, root_dir: minimal, cache: ~/.cache/pip }
+            #- { os: ubuntu-latest, python: 3.9, root_dir: minimal, cache: ~/.cache/pip }
 
             # minimal examples on additional operating systems
-            #- { os:   macos-latest, python: 2.7, root_dir: minimal, cache: ~/Library/Caches/pip }
-            #- { os:   macos-latest, python: 3.9, root_dir: minimal, cache: ~/Library/Caches/pip }
-            #- { os: windows-latest, python: 2.7, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
-            #- { os: windows-latest, python: 3.9, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
+            - { os:   macos-latest, python: 2.7, root_dir: minimal, cache: ~/Library/Caches/pip }
+            - { os:   macos-latest, python: 3.9, root_dir: minimal, cache: ~/Library/Caches/pip }
+            - { os: windows-latest, python: 2.7, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
+            - { os: windows-latest, python: 3.9, root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
 
             # bzr example
-            #- { os:  ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
-            #- { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
+            - { os:  ubuntu-latest, python: 3.9, root_dir: bzr, cache: ~/.cache/pip }
+            - { os: windows-latest, python: 3.9, root_dir: bzr, cache: ~\AppData\Local\pip\Cache }
 
             # git example
             #- { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
