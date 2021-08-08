@@ -91,3 +91,10 @@ jobs:
       run: |
         find ${{ matrix.root_dir }}/output/target 2>/dev/null || true
         find ${{ matrix.root_dir }}/output/images 2>/dev/null || true
+      if: matrix.root_dir != 'windows-latest'
+
+    - name: Dump of output
+      run: |
+        Get-ChildItem ${{ matrix.root_dir }}/output/target -recurse | foreach fullname
+        Get-ChildItem ${{ matrix.root_dir }}/output/target -recurse | foreach fullname
+      if: matrix.root_dir == 'windows-latest'
