@@ -63,7 +63,11 @@ jobs:
 
     # dependencies
     - name: Install dependencies (Python)
-      run: python -m pip install --upgrade pip wheel
+      run: >
+        python -m pip install --upgrade
+        matplotlib
+        pip
+        wheel
     # dependencies (bzr)
     - name: Install dependencies (bzr; ubuntu-latest)
       run: >
@@ -112,3 +116,9 @@ jobs:
         Get-ChildItem ${{ matrix.root_dir }}/output/target -recurse | foreach fullname
         Get-ChildItem ${{ matrix.root_dir }}/output/target -recurse | foreach fullname
       if: matrix.os == 'windows-latest'
+
+    - name: Track duration information
+      uses: actions/upload-artifact@v2
+      with: 
+        name: duration-statistics
+        path: ${{ matrix.root_dir }}/output/misc/durations*
