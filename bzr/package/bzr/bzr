@@ -1,17 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
-
 BZR_DEPENDENCIES = ['cython']
 BZR_LICENSE = ['GPL-2.0+']
 BZR_LICENSE_FILES = ['COPYING.txt']
+BZR_PYTHON_INTERPRETER = 'python2.7'
 BZR_REVISION = 'bzr-$BZR_VERSION'
 BZR_SITE = 'bzr+lp:bzr'
 BZR_TYPE = 'python'
 BZR_VERSION = '2.7.0'
-
-if sys.platform != 'win32':
-    BZR_PYTHON_INTERPRETER = 'python2.7'
-else:
-    BZR_PYTHON_INTERPRETER = 'C:\Python27\python'
