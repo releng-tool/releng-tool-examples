@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+LIBICONV_AUTOTOOLS_AUTORECONF = True
+LIBICONV_LICENSE = ['GPL-3.0+', 'LGPL-2.0+']
+LIBICONV_LICENSE_FILES = ['COPYING', 'COPYING.LIB']
+LIBICONV_REVISION = 'libiconv_1_13'
+LIBICONV_SITE = ':pserver:anonymous@cvs.savannah.gnu.org:/sources/libiconv libiconv'
+LIBICONV_TYPE = 'autotools'
+LIBICONV_VERSION = '1.13'
