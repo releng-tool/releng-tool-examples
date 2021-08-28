@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+MERCURIAL_HELLO_SITE = 'hg+https://www.mercurial-scm.org/repo/hello'
+MERCURIAL_HELLO_REVISION = 'default'
+MERCURIAL_HELLO_VERSION = 'development'
