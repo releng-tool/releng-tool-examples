@@ -30,6 +30,9 @@ jobs:
             # git example
             - { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
 
+            # libiconv example
+            - { os: ubuntu-latest, python: 3.9, root_dir: libiconv, cache: ~/.cache/pip, action: extract }
+
             # mercurial-hello example
             - { os: ubuntu-latest, python: 3.9, root_dir: mercurial-hello, cache: ~/.cache/pip }
 
@@ -72,6 +75,12 @@ jobs:
         bzr
         python-dev
       if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'bzr'
+    # dependencies (libiconv)
+    - name: Install dependencies (libiconv; ubuntu-latest)
+      run: >
+        sudo apt-get install
+        cvs
+      if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'libiconv'
     # dependencies (git)
     - name: Install dependencies (git; ubuntu-latest)
       run: >
@@ -107,6 +116,7 @@ jobs:
         --dl-dir $HOME/releng-tool-dl
         --debug
         --jobs 1
+        ${{ matrix.action }}
 
     - name: Dump of output
       run: |
@@ -123,5 +133,5 @@ jobs:
     - name: Track duration information
       uses: actions/upload-artifact@v2
       with: 
-        name: duration-statistics
+        name: durations-${{ matrix.root_dir }}-${{ matrix.os }}-${{ matrix.python }}
         path: ${{ matrix.root_dir }}/output/misc/durations*
