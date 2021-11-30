@@ -4,7 +4,7 @@
 LIBPCRE2_INSTALL_TYPE = 'staging'
 LIBPCRE2_LICENSE = ['BSD 3-Clause']
 LIBPCRE2_LICENSE_FILES = ['COPYING']
-LIBPCRE2_SITE = 'https://ftp.pcre.org/pub/pcre/pcre2-10.32.tar.gz'
+LIBPCRE2_SITE = 'https://sourceforge.net/projects/pcre/files/pcre2/10.32/pcre2-10.32.tar.gz'
 LIBPCRE2_TYPE = 'autotools'
 LIBPCRE2_VERSION = '10.32'
 
