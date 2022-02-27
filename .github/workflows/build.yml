@@ -115,7 +115,6 @@ jobs:
         --cache-dir $HOME/releng-tool-cache
         --dl-dir $HOME/releng-tool-dl
         --debug
-        --jobs 1
         ${{ matrix.action }}
 
     - name: Dump of output
