@@ -2,6 +2,9 @@ name: Examples (all)
 
 on:
   workflow_dispatch:
+    inputs:
+      root_target:
+        description: 'Root target to run'
 
 jobs:
   Build:
@@ -42,6 +45,9 @@ jobs:
             # vulkan-samples example
             - { os:  ubuntu-latest, python: 3.9, root_dir: vulkan-samples, cache: ~/.cache/pip }
             - { os: windows-latest, python: 3.9, root_dir: vulkan-samples, cache: ~\AppData\Local\pip\Cache }
+
+    # If a specific project has been requested, only run for the requested root.
+    if: ${{ github.event.inputs.root_target == '' || github.event.inputs.root_target == matrix.root_dir }}
 
     steps:
     - uses: actions/checkout@v3
