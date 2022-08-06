@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+cmd = [
+    'scons',
+]
+
+if NJOBS:
+    cmd.extend(['--jobs', NJOBS])
+
+releng_execute(cmd)

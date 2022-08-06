@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+GPSD_DEPENDENCIES = [
+    'scons',
+]
+
+GPSD_SITE = 'https://download-mirror.savannah.gnu.org/releases/gpsd/gpsd-${GPSD_VERSION}.tar.xz'
+GPSD_VERSION = '3.24'

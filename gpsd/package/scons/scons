@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+SCONS_INSTALL_TYPE = 'host'
+SCONS_SITE = 'https://github.com/SCons/scons/releases/download/${SCONS_VERSION}/SCons-${SCONS_VERSION}.tar.gz'
+SCONS_TYPE = 'python'
+SCONS_VERSION = '4.4.0'

@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+env = {
+    'DESTDIR': TARGET_DIR,
+}
+
+cmd = [
+    'scons',
+    'install',
+]
+
+releng_execute(cmd, env_update=env)
