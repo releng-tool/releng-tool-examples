@@ -49,10 +49,11 @@ jobs:
             - { os:  ubuntu-latest, python: 3.9, root_dir: vulkan-samples, cache: ~/.cache/pip }
             - { os: windows-latest, python: 3.9, root_dir: vulkan-samples, cache: ~\AppData\Local\pip\Cache }
 
-    # If a specific project has been requested, only run for the requested root.
-    if: ${{ github.event.inputs.root_target == '' || github.event.inputs.root_target == matrix.root_dir }}
-
     steps:
+    - name: Check if matrix job is permitted
+      # If a specific project has been requested, only run for the requested root.
+      run: exit ${{ github.event.inputs.root_target != '' && github.event.inputs.root_target != matrix.root_dir }}
+
     - name: Checkout sources
       uses: actions/checkout@v3
 
