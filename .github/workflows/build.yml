@@ -33,6 +33,9 @@ jobs:
             # git example
             - { os: ubuntu-latest, python: 3.9, root_dir: git, cache: ~/.cache/pip }
 
+            # gpsd example
+            - { os: ubuntu-latest, python: 3.10, root_dir: gpsd, cache: ~/.cache/pip }
+
             # libiconv example
             - { os: ubuntu-latest, python: 3.9, root_dir: libiconv, cache: ~/.cache/pip, action: extract }
 
