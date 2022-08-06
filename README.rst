@@ -1,8 +1,8 @@
 releng-tool examples
 ====================
 
-.. image:: https://github.com/releng-tool/releng-tool-examples/workflows/build/badge.svg?branch=main
-    :target: https://github.com/releng-tool/releng-tool-examples/actions?query=workflow%3Abuild
+.. image:: https://github.com/releng-tool/releng-tool-examples/actions/workflows/build.yml/badge.svg
+    :target: https://github.com/releng-tool/releng-tool-examples/actions/workflows/build.yml
     :alt: Build Status
 
 This repository holds a series of examples projects to help with the
