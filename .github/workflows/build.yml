@@ -1,4 +1,4 @@
-name: Examples (all)
+name: Examples
 
 on:
   workflow_dispatch:
@@ -53,7 +53,8 @@ jobs:
     if: ${{ github.event.inputs.root_target == '' || github.event.inputs.root_target == matrix.root_dir }}
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout sources
+      uses: actions/checkout@v3
 
     - name: Set up Python ${{ matrix.python }}
       uses: actions/setup-python@v4
