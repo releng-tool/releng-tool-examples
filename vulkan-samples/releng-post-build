@@ -11,7 +11,7 @@ filename = '{}-{}-{}.tgz'.format('vulkan-samples', EXAMPLE_VERSION, ts)
 tgz_filename = releng_join(IMAGES_DIR, filename)
 
 readme = releng_join(ROOT_DIR, 'assets', 'package-readme')
-bin_dir = releng_join(TARGET_DIR, 'usr', 'bin')
+bin_dir = releng_join(PREFIXED_TARGET_DIR, 'bin')
 
 if sys.platform != 'win32':
     hologram = releng_join(bin_dir, 'Hologram')
