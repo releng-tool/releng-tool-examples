@@ -131,6 +131,6 @@ jobs:
 
     - name: Track duration information
       uses: actions/upload-artifact@v2
-      with: 
+      with:
         name: durations-${{ matrix.root_dir }}-${{ matrix.os }}-${{ matrix.python }}
         path: ${{ matrix.root_dir }}/output/misc/durations*
