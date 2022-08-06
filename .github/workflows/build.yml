@@ -1,10 +1,10 @@
-name: build
+name: Examples (all)
 
 on:
   workflow_dispatch:
 
 jobs:
-  build:
+  Build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -44,15 +44,15 @@ jobs:
             - { os: windows-latest, python: 3.9, root_dir: vulkan-samples, cache: ~\AppData\Local\pip\Cache }
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Set up Python ${{ matrix.python }}
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python }}
 
     - name: Cache
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       id: cache-pip
       with:
         path: |
