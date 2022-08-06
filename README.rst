@@ -1,7 +1,7 @@
 releng-tool examples
 ====================
 
-.. image:: https://github.com/releng-tool/releng-tool-examples/workflows/build/badge.svg?branch=master
+.. image:: https://github.com/releng-tool/releng-tool-examples/workflows/build/badge.svg?branch=main
     :target: https://github.com/releng-tool/releng-tool-examples/actions?query=workflow%3Abuild
     :alt: Build Status
 
