@@ -10,6 +10,7 @@ jobs:
   Build:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         include:
             # minimal examples on each python interpreter
@@ -52,7 +53,7 @@ jobs:
     steps:
     - name: Check if matrix job is permitted
       # If a specific project has been requested, only run for the requested root.
-      run: exit ${{ github.event.inputs.root_target != '' && github.event.inputs.root_target != matrix.root_dir }}
+      run: [[ ${{ github.event.inputs.root_target != '' && github.event.inputs.root_target != matrix.root_dir }} ]] && exit 1
 
     - name: Checkout sources
       uses: actions/checkout@v3
