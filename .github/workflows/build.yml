@@ -21,34 +21,35 @@ jobs:
             - { os: ubuntu-latest, python:  "3.8", root_dir: minimal, cache: ~/.cache/pip }
             - { os: ubuntu-latest, python:  "3.9", root_dir: minimal, cache: ~/.cache/pip }
             - { os: ubuntu-latest, python: "3.10", root_dir: minimal, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, python: "3.11", root_dir: minimal, cache: ~/.cache/pip }
 
             # minimal examples on additional operating systems
             - { os:   macos-latest, python:  "2.7", root_dir: minimal, cache: ~/Library/Caches/pip }
-            - { os:   macos-latest, python: "3.10", root_dir: minimal, cache: ~/Library/Caches/pip }
+            - { os:   macos-latest, python: "3.11", root_dir: minimal, cache: ~/Library/Caches/pip }
             - { os: windows-latest, python:  "2.7", root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
-            - { os: windows-latest, python: "3.10", root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
+            - { os: windows-latest, python: "3.11", root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
 
             # bzr example
-            - { os: ubuntu-latest, python: "3.10", root_dir: bzr, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, python: "3.11", root_dir: bzr, cache: ~/.cache/pip }
 
             # git example
-            - { os: ubuntu-latest, python: "3.10", root_dir: git, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, python: "3.11", root_dir: git, cache: ~/.cache/pip }
 
             # gpsd example
-            - { os: ubuntu-latest, python: "3.10", root_dir: gpsd, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, python: "3.11", root_dir: gpsd, cache: ~/.cache/pip }
 
             # libiconv example
-            - { os: ubuntu-latest, python: "3.10", root_dir: libiconv, cache: ~/.cache/pip, action: extract }
+            - { os: ubuntu-latest, python: "3.11", root_dir: libiconv, cache: ~/.cache/pip, action: extract }
 
             # mercurial-hello example
-            - { os: ubuntu-latest, python: "3.10", root_dir: mercurial-hello, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, python: "3.11", root_dir: mercurial-hello, cache: ~/.cache/pip }
 
             # nghttp2 example
-            - { os: ubuntu-latest, python: "3.10", root_dir: nghttp2, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, python: "3.11", root_dir: nghttp2, cache: ~/.cache/pip }
 
             # vulkan-samples example
-            - { os:  ubuntu-latest, python: "3.10", root_dir: vulkan-samples, cache: ~/.cache/pip }
-            - { os: windows-latest, python: "3.10", root_dir: vulkan-samples, cache: ~\AppData\Local\pip\Cache }
+            - { os:  ubuntu-latest, python: "3.11", root_dir: vulkan-samples, cache: ~/.cache/pip }
+            - { os: windows-latest, python: "3.11", root_dir: vulkan-samples, cache: ~\AppData\Local\pip\Cache }
 
     steps:
     - name: Check if matrix job is permitted
