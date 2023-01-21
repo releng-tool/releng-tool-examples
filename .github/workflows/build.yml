@@ -54,7 +54,9 @@ jobs:
     - name: Check if matrix job is permitted
       # If a specific project has been requested, only run for the requested root.
       if: ${{ github.event.inputs.root_target != '' && github.event.inputs.root_target != matrix.root_dir }}
-      run: exit 1
+      run: |
+        echo ${{ github.event.inputs.root_target }}
+        exit 1
 
     - name: Checkout sources
       uses: actions/checkout@v3
