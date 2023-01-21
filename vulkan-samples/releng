@@ -5,5 +5,9 @@ packages = [
     'vulkan-samples',
 ]
 
+extra_licenses = {
+    'NVIDIA-preprocessor': 'NVIDIA Preprocessor',
+}
+
 # project variable (shared with `releng-post`)
 EXAMPLE_VERSION = '0.1.0'
