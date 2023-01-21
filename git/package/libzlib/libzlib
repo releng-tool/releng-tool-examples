@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-LIBZLIB_LICENSE = ['zlib']
+LIBZLIB_LICENSE = ['Zlib']
 LIBZLIB_LICENSE_FILES = ['README']
 LIBZLIB_SITE = 'https://prdownloads.sourceforge.net/libpng/zlib-1.2.11.tar.xz?download'
 LIBZLIB_VERSION = '1.2.11'

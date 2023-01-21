@@ -9,7 +9,7 @@ GIT_DEPENDENCIES = [
     'libzlib',
 ]
 
-GIT_LICENSE = ['GPL-2.0', 'LGPL-2.1+']
+GIT_LICENSE = ['GPL-2.0-only', 'LGPL-2.1-or-later']
 GIT_LICENSE_FILES = ['COPYING', 'LGPL-2.1']
 GIT_REVISION = 'v2.19.1'
 GIT_SITE = 'https://github.com/git/git.git'
