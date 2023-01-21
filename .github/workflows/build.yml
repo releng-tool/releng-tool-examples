@@ -86,7 +86,7 @@ jobs:
       run: >
         sudo apt-get install
         bzr
-        python-dev
+        python2-dev
       if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'bzr'
     # dependencies (libiconv)
     - name: Install dependencies (libiconv; ubuntu-latest)
