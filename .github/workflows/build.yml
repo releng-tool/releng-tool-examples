@@ -75,7 +75,7 @@ jobs:
             ${{ matrix.cache }}
             $HOME/releng-tool-cache
             $HOME/releng-tool-dl
-        key: ${{ matrix.os }}-${{ matrix.python }}-pip-
+        key: ${{ matrix.os }}-${{ matrix.python }}-pip
 
     # dependencies
     - name: Install dependencies (Python)
