@@ -1,0 +1,4 @@
+# https://www.openssl.org/source/
+sha256 2836875a0f89c03d0fdf483941512613a50cfb421d6fd94b9f41d7279d586a3d libopenssl-1.1.1.tar.gz
+# locally computed
+sha256 350c7817af2ef980d3f3922bc5e0bb6a9d9f6cc21e784a699bcd2a31c74a84b1 LICENSE

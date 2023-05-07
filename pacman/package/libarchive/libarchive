@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+LIBARCHIVE_DEPENDENCIES = [
+    'libopenssl',
+    'libzlib',
+]
+LIBARCHIVE_INSTALL_TYPE = 'staging'
+LIBARCHIVE_LICENSE = (
+    'Apache-2.0 OR CC0-1.0 OR OpenSSL',
+    'BSD-2-Clause',
+    'BSD-3-Clause',
+)
+LIBARCHIVE_LICENSE_FILES = ['COPYING']
+LIBARCHIVE_SITE = 'https://www.libarchive.de/downloads/libarchive-${LIBARCHIVE_VERSION}.tar.xz'
+LIBARCHIVE_TYPE = 'autotools'
+LIBARCHIVE_VERSION = '3.6.2'
+
+LIBARCHIVE_CONF_OPTS = [
+    '--with-openssl',
+    '--with-zlib',
+    # disable various features not needed for this example
+    '--disable-acl',
+    '--disable-bsdcat',
+    '--disable-bsdcpio',
+    '--disable-bsdtar',
+    '--disable-posix-regex-lib',
+    '--disable-xattr',
+    '--without-bz2lib',
+    '--without-cng',
+    '--without-expat',
+    '--without-iconv',
+    '--without-libb2',
+    '--without-lz4',
+    '--without-lzma',
+    '--without-xml2',
+    '--without-zstd',
+]

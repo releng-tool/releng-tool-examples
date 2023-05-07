@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+
+PACMAN_DEPENDENCIES = [
+    'libarchive',
+    'libopenssl',
+]
+PACMAN_LICENSE = 'GPL-2.0-or-later'
+PACMAN_LICENSE_FILES = 'COPYING'
+PACMAN_SITE = 'https://sources.archlinux.org/other/pacman/pacman-${PACMAN_VERSION}.tar.xz'
+PACMAN_TYPE = 'meson'
+PACMAN_VERSION = '6.0.2'
+
+PACMAN_CONF_DEFS = {
+    'crypto': 'openssl',
+    'curl': 'disabled',
+    'doc': 'disabled',
+    'file-seccomp': 'disabled',
+    'gpgme': 'disabled',
+    'i18n': 'false',
+    'use-git-version': 'false',
+}

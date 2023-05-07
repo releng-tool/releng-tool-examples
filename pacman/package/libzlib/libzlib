@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+LIBZLIB_LICENSE = 'Zlib'
+LIBZLIB_LICENSE_FILES = 'README'
+LIBZLIB_SITE = 'https://prdownloads.sourceforge.net/libpng/zlib-${LIBZLIB_VERSION}.tar.xz?download'
+LIBZLIB_TYPE = 'make'
+LIBZLIB_VERSION = '1.2.11'
