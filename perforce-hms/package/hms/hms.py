@@ -1,0 +1,5 @@
+HMS_LICENSE = 'BSD-2-Clause'
+HMS_LICENSE_FILES = 'LICENSE'
+#HMS_REVISION = '29547'
+HMS_SITE = 'guest@public.perforce.com:1666 //guest/perforce_software/hms/main/...@27574'
+HMS_VCS_TYPE = 'perforce'
