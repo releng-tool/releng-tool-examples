@@ -48,6 +48,9 @@ jobs:
             # pacman example
             - { os: ubuntu-latest, python: "3.11", root_dir: pacman, cache: ~/.cache/pip }
 
+            # perforce-hms example
+            - { os: ubuntu-latest, python: "3.11", root_dir: perforce-hms, cache: ~/.cache/pip }
+
             # nghttp2 example
             - { os: ubuntu-latest, python: "3.11", root_dir: nghttp2, cache: ~/.cache/pip }
 
