@@ -131,6 +131,15 @@ jobs:
         sudo apt-get install ninja-build
         python -m pip install --upgrade meson
       if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'pacman'
+    # dependencies (perforce-hms)
+    - name: Install dependencies (perforce-hms; ubuntu-latest).
+      run: |
+        wget -qO - https://package.perforce.com/perforce.pubkey | sudo apt-key add -
+        printf "deb http://package.perforce.com/apt/ubuntu $(lsb_release -sc) release\n" | sudo tee /etc/apt/sources.list.d/perforce.list >/dev/null
+        sudo apt update && sudo apt install helix-cli
+        wget https://git.kernel.org/pub/scm/git/git.git/plain/git-p4.py?id=master -O git-p4 && chmod +x git-p4
+        sudo mv git-p4 /usr/lib/git-core/
+      if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'perforce-hms'
     # dependencies (vulkan-samples)
     - name: Install dependencies (vulkan-samples; ubuntu-latest)
       run: >
