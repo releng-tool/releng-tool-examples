@@ -6,19 +6,25 @@ NGHTTP2_DEPENDENCIES = [
 ]
 NGHTTP2_LICENSE = ['MIT']
 NGHTTP2_LICENSE_FILES = ['COPYING']
-NGHTTP2_REVISION = 'v1.37.0'
+NGHTTP2_REVISION = 'v1.58.0'
 NGHTTP2_SITE = 'https://github.com/nghttp2/nghttp2.git'
 NGHTTP2_TYPE = 'cmake'
-NGHTTP2_VERSION = '1.37.0'
+NGHTTP2_VERSION = '1.58.0'
 
 NGHTTP2_CONF_DEFS = {
-    # build application (no examples)
+    # build application (no docs/examples)
     'ENABLE_APP': 'ON',
+    'ENABLE_DOC': 'OFF',
     'ENABLE_EXAMPLES': 'OFF',
     # no library
     'ENABLE_STATIC_LIB': 'OFF',
     'ENABLE_SHARED_LIB': 'OFF',
+    # relaxed build
+    'ENABLE_WERROR': 'OFF',
     # explicitly disable select features
-    'WITH_SPDYLAY': 'OFF',
+    'WITH_LIBXML2': 'OFF',
+    'WITH_JEMALLOC': 'OFF',
     'WITH_MRUBY': 'OFF',
+    'WITH_NEVERBLEED': 'OFF',
+    'WITH_LIBBPF': 'OFF',
 }
