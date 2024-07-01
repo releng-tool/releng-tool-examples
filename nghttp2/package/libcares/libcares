@@ -4,7 +4,7 @@
 LIBCARES_INSTALL_TYPE = 'staging'
 LIBCARES_LICENSE = ['MIT']
 LIBCARES_LICENSE_FILES = ['LICENSE.md']
-LIBCARES_SITE = 'https://c-ares.haxx.se/download/c-ares-1.15.0.tar.gz'
+LIBCARES_SITE = 'https://github.com/c-ares/c-ares/releases/download/cares-1_15_0/c-ares-1.15.0.tar.gz'
 LIBCARES_TYPE = 'cmake'
 LIBCARES_VERSION = '1.15.0'
 
