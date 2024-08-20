@@ -17,7 +17,6 @@ jobs:
         include:
             # minimal examples on each python interpreter
             - { os: ubuntu-latest, img:  "python:2.7", python:  "2.7", root_dir: minimal, cache: ~/.cache/pip }
-            - { os: ubuntu-latest, img:  "python:3.4", python:  "3.5", root_dir: minimal, cache: ~/.cache/pip }
             - { os: ubuntu-latest, img:  "python:3.5", python:  "3.5", root_dir: minimal, cache: ~/.cache/pip }
             - { os: ubuntu-latest, img:  "python:3.6", python:  "3.6", root_dir: minimal, cache: ~/.cache/pip }
             - { os: ubuntu-latest, img:  "python:3.7", python:  "3.7", root_dir: minimal, cache: ~/.cache/pip }
