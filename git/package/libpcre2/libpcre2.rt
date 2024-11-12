@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# SPDX-License-Identifier: 0BSD
 
 LIBPCRE2_INSTALL_TYPE = 'staging'
 LIBPCRE2_LICENSE = ['BSD-3-Clause']
