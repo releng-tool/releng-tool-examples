@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# SPDX-License-Identifier: 0BSD
 
 LIBICONV_AUTOTOOLS_AUTORECONF = True
 LIBICONV_LICENSE = ['GPL-3.0-or-later', 'LGPL-2.0-or-later']
