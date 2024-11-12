@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# SPDX-License-Identifier: 0BSD
 
 KHRONOS_SPIRV_HEADERS_DEVMODE_REVISION = 'master'
 KHRONOS_SPIRV_HEADERS_INSTALL_TYPE = 'staging'

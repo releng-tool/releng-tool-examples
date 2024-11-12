@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# SPDX-License-Identifier: 0BSD
 
 KHRONOS_VULKAN_LOADER_DEPENDENCIES = [
     'khronos-vulkan',

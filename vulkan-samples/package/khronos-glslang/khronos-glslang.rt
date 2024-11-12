@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# SPDX-License-Identifier: 0BSD
 
 KHRONOS_GLSLANG_DEVMODE_REVISION = 'master'
 KHRONOS_GLSLANG_INSTALL_TYPE = 'staging'
