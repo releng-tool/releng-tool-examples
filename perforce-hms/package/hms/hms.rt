@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: 0BSD
+
 HMS_LICENSE = 'BSD-2-Clause'
 HMS_LICENSE_FILES = 'main/LICENSE'
 HMS_REVISION = '27574'
