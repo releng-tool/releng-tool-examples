@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# SPDX-License-Identifier: 0BSD
 
 PACMAN_DEPENDENCIES = [
     'libarchive',
