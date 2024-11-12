@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# SPDX-License-Identifier: 0BSD
 
 LIBXML2_DEPENDENCIES = ['libzlib']
 LIBXML2_INSTALL_TYPE = 'staging'

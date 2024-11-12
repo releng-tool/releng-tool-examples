@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# SPDX-License-Identifier: 0BSD
 
 LIBJEMALLOC_INSTALL_TYPE = 'staging'
 LIBJEMALLOC_LICENSE = ['BSD-2-Clause']
