@@ -1,11 +1,10 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# SPDX-License-Identifier: 0BSD
 
 BZR_DEPENDENCIES = ['cython']
 BZR_LICENSE = ['GPL-2.0-or-later']
 BZR_LICENSE_FILES = ['COPYING.txt']
 BZR_PYTHON_INTERPRETER = 'python2.7'
 BZR_REVISION = 'bzr-$BZR_VERSION'
-BZR_SITE = 'bzr+lp:bzr'
+BZR_SITE = 'bzr+https://code.launchpad.net/~bzr-pqm/bzr/bzr.dev'
 BZR_TYPE = 'python'
 BZR_VERSION = '2.7.0'
