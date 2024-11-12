@@ -1,7 +1,7 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# SPDX-License-Identifier: 0BSD
 
 SCONS_INSTALL_TYPE = 'host'
+SCONS_PYTHON_SETUP_TYPE = 'setuptools'
 SCONS_SITE = 'https://github.com/SCons/scons/releases/download/${SCONS_VERSION}/SCons-${SCONS_VERSION}.tar.gz'
 SCONS_TYPE = 'python'
 SCONS_VERSION = '4.4.0'
