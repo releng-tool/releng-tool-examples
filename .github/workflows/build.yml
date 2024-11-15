@@ -32,7 +32,7 @@ jobs:
             - { os: windows-latest, python: "3.12", root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
 
             # bzr example
-            - { os: ubuntu-latest, python: "3.12", root_dir: bzr, cache: ~/.cache/pip }
+            - { os: ubuntu-latest, img: "python:2.7", python: "2.7", root_dir: bzr, cache: ~/.cache/pip }
 
             # git example
             - { os: ubuntu-latest, python: "3.12", root_dir: git, cache: ~/.cache/pip }
@@ -103,10 +103,7 @@ jobs:
         wheel
     # dependencies (bzr)
     - name: Install dependencies (bzr; ubuntu-latest)
-      run: >
-        sudo apt-get install
-        bzr
-        python2-dev
+      run: apt update && apt-get install bzr --assume-yes
       if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'bzr'
     # dependencies (libiconv)
     - name: Install dependencies (libiconv; ubuntu-latest)
