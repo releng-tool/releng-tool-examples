@@ -105,18 +105,18 @@ jobs:
     - name: Install dependencies (bzr; ubuntu-latest)
       run: apt update && apt-get install bzr --assume-yes
       if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'bzr'
-    # dependencies (libiconv)
-    - name: Install dependencies (libiconv; ubuntu-latest)
-      run: >
-        sudo apt-get install
-        cvs
-      if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'libiconv'
     # dependencies (git)
     - name: Install dependencies (git; ubuntu-latest)
       run: >
         sudo apt-get install
         gettext
       if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'git'
+    # dependencies (libiconv)
+    - name: Install dependencies (libiconv; ubuntu-latest)
+      run: >
+        sudo apt-get install
+        cvs
+      if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'libiconv'
     # dependencies (mercurial-hello)
     - name: Install dependencies (mercurial-hello; ubuntu-latest)
       run: >
