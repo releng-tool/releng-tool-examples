@@ -1,0 +1,6 @@
+# SPDX-License-Identifier: 0BSD
+
+PART_E_CARGO_NAME = 'part-e-variant'
+PART_E_CARGO_NOINSTALL = True
+PART_E_SITE = 'local'
+PART_E_TYPE = 'cargo'

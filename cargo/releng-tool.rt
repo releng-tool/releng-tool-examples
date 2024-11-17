@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: 0BSD
+
+packages = [
+    'full',
+]
+
+quirks = [
+    'releng.disable_local_site_warn',
+]

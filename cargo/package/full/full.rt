@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: 0BSD
+
+FULL_DEPENDENCIES = [
+    'part-a',
+    'part-b',
+    'part-c',
+]
+FULL_SITE = 'local'
+FULL_TYPE = 'cargo'

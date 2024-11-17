@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: 0BSD
+
+PART_D_CARGO_NOINSTALL = True
+PART_D_SITE = 'local'
+PART_D_TYPE = 'cargo'

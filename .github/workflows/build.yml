@@ -34,6 +34,9 @@ jobs:
             # bzr example
             - { os: ubuntu-latest, img: "python:2.7", python: "2.7", root_dir: bzr, cache: ~/.cache/pip }
 
+            # cargo example
+            - { os: ubuntu-latest, python: "3.12", root_dir: cargo, cache: ~/.cache/pip }
+
             # git example
             - { os: ubuntu-latest, python: "3.12", root_dir: git, cache: ~/.cache/pip }
 
@@ -105,6 +108,10 @@ jobs:
     - name: Install dependencies (bzr; ubuntu-latest)
       run: apt update && apt-get install bzr --assume-yes
       if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'bzr'
+    # dependencies (cargo)
+    - name: Install dependencies (cargo; ubuntu-latest)
+      uses: actions-rust-lang/setup-rust-toolchain@v1
+      if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'cargo'
     # dependencies (git)
     - name: Install dependencies (git; ubuntu-latest)
       run: >

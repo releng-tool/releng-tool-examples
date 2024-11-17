@@ -1,0 +1,9 @@
+[package]
+name = "full"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+part-a = { version = "0.1.0" }
+part-b = { version = "0.1.0" }
+part-c = { version = "0.1.0" }
