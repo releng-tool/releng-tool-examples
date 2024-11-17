@@ -4,7 +4,22 @@ on:
   workflow_dispatch:
     inputs:
       root_target:
-        description: 'Root target to run'
+        type: choice
+        description: Project to run
+        options:
+          - ''
+          - brz
+          - bzr
+          - cargo
+          - git
+          - gpsd
+          - libiconv
+          - mercurial-hello
+          - minimal
+          - nghttp2
+          - pacman
+          - perforce-hms
+          - vulkan-samples
 
 jobs:
   build:
