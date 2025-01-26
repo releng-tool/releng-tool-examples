@@ -115,7 +115,9 @@ jobs:
         wheel
     # dependencies (breezyshim)
     - name: Install dependencies (breezyshim; ubuntu-latest)
-      run: apt update && apt-get install brz --assume-yes
+      run: >
+        sudo apt-get install
+        brz
       if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'breezyshim'
     - name: Install dependencies (breezyshim, cargo; ubuntu-latest)
       uses: actions-rust-lang/setup-rust-toolchain@v1
