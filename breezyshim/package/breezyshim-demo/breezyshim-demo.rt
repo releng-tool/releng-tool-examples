@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: 0BSD
+
+BREEZYSHIM_DEMO_NEEDS = [
+    'breezyshim',
+]
+
+BREEZYSHIM_DEMO_SITE = 'local'
+BREEZYSHIM_DEMO_TYPE = 'cargo'

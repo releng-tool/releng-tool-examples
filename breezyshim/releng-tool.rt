@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: 0BSD
+
+packages = [
+    'breezyshim-demo',
+]
+
+quirks = [
+    'releng.disable_local_site_warn',
+]

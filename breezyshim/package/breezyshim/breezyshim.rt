@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: 0BSD
+
+BREEZYSHIM_CARGO_NOINSTALL = True
+BREEZYSHIM_LICENSE = ['GPL-2.0-only']
+BREEZYSHIM_LICENSE_FILES = ['COPYING.txt']
+BREEZYSHIM_SITE = 'brz+https://code.launchpad.net/~jelmer/breezyshim/trunk'
+BREEZYSHIM_TYPE = 'cargo'
+BREEZYSHIM_VERSION = '565'
