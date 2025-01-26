@@ -1,8 +1,9 @@
 # SPDX-License-Identifier: 0BSD
 
-PART_B_DEPENDENCIES = [
+PART_B_NEEDS = [
     'part-e',
 ]
+
 PART_B_CARGO_NOINSTALL = True
 PART_B_SITE = 'local'
 PART_B_TYPE = 'cargo'

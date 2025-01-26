@@ -1,9 +1,10 @@
 # SPDX-License-Identifier: 0BSD
 
-FULL_DEPENDENCIES = [
+FULL_NEEDS = [
     'part-a',
     'part-b',
     'part-c',
 ]
+
 FULL_SITE = 'local'
 FULL_TYPE = 'cargo'
