@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: 0BSD
 
-VULKAN_SAMPLES_DEPENDENCIES = [
+VULKAN_SAMPLES_NEEDS = [
     'khronos-vulkan',
     'khronos-vulkan-loader',
 ]

@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: 0BSD
 
-KHRONOS_VULKAN_DEPENDENCIES = [
+KHRONOS_VULKAN_NEEDS = [
     'khronos-glslang',
     'khronos-spirv-tools',
 ]

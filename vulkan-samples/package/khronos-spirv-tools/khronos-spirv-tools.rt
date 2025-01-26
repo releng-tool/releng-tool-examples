@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: 0BSD
 
-KHRONOS_SPIRV_TOOLS_DEPENDENCIES = [
+KHRONOS_SPIRV_TOOLS_NEEDS = [
     'khronos-spirv-headers',
 ]
 

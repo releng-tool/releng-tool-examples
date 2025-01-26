@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: 0BSD
 
-KHRONOS_VULKAN_LOADER_DEPENDENCIES = [
+KHRONOS_VULKAN_LOADER_NEEDS = [
     'khronos-vulkan',
 ]
 
