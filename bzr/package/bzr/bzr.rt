@@ -1,6 +1,9 @@
 # SPDX-License-Identifier: 0BSD
 
-BZR_DEPENDENCIES = ['cython']
+BZR_NEEDS = [
+    'cython',
+]
+
 BZR_LICENSE = ['GPL-2.0-or-later']
 BZR_LICENSE_FILES = ['COPYING.txt']
 BZR_PYTHON_INTERPRETER = 'python2.7'
