@@ -8,7 +8,7 @@ on:
         description: Project to run
         options:
           - ''
-          - brz
+          - breezyshim
           - cargo
           - git
           - gpsd
@@ -40,6 +40,8 @@ jobs:
             - { os:   macos-latest, python: "3.12", root_dir: minimal, cache: ~/Library/Caches/pip }
             - { os: windows-latest, python: "3.12", root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
 
+            # breezyshim example
+            - { os: ubuntu-latest, python: "3.13", root_dir: breezyshim, cache: ~/.cache/pip }
 
             # cargo example
             - { os: ubuntu-latest, python: "3.12", root_dir: cargo, cache: ~/.cache/pip }
@@ -111,6 +113,13 @@ jobs:
         pip
         setuptools
         wheel
+    # dependencies (breezyshim)
+    - name: Install dependencies (breezyshim; ubuntu-latest)
+      run: apt update && apt-get install brz --assume-yes
+      if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'breezyshim'
+    - name: Install dependencies (breezyshim, cargo; ubuntu-latest)
+      uses: actions-rust-lang/setup-rust-toolchain@v1
+      if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'breezyshim'
     # dependencies (cargo)
     - name: Install dependencies (cargo; ubuntu-latest)
       uses: actions-rust-lang/setup-rust-toolchain@v1
