@@ -1,6 +1,9 @@
 # SPDX-License-Identifier: 0BSD
 
-LIBXML2_DEPENDENCIES = ['libzlib']
+LIBXML2_NEEDS = [
+    'libzlib',
+]
+
 LIBXML2_INSTALL_TYPE = 'staging'
 LIBXML2_LICENSE = ['MIT']
 LIBXML2_LICENSE_FILES = ['COPYING']

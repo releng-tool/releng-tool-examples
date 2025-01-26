@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: 0BSD
 
-LIBNGHTTP2_DEPENDENCIES = [
+LIBNGHTTP2_NEEDS = [
     'libcares',
     'libev',
     'libjemalloc',
@@ -8,6 +8,7 @@ LIBNGHTTP2_DEPENDENCIES = [
     'libxml2',
     'libzlib',
 ]
+
 LIBNGHTTP2_INSTALL_TYPE = 'staging'
 LIBNGHTTP2_LICENSE = ['MIT']
 LIBNGHTTP2_LICENSE_FILES = ['COPYING']
