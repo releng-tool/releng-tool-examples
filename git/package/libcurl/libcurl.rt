@@ -1,6 +1,10 @@
 # SPDX-License-Identifier: 0BSD
 
-LIBCURL_DEPENDENCIES = ['libopenssl', 'libzlib']
+LIBCURL_NEEDS = [
+    'libopenssl',
+    'libzlib',
+]
+
 LIBCURL_INSTALL_TYPE = 'staging'
 LIBCURL_LICENSE = ['curl']
 LIBCURL_LICENSE_FILES = ['COPYING']

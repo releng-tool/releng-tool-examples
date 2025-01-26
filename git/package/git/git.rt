@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: 0BSD
 
-GIT_DEPENDENCIES = [
+GIT_NEEDS = [
     'libcurl',
     'libexpat',
     'libopenssl',

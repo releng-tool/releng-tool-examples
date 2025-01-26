@@ -1,6 +1,9 @@
 # SPDX-License-Identifier: 0BSD
 
-LIBOPENSSL_DEPENDENCIES = ['libzlib']
+LIBOPENSSL_NEEDS = [
+    'libzlib',
+]
+
 LIBOPENSSL_LICENSE = 'OpenSSL'
 LIBOPENSSL_LICENSE_FILES = 'LICENSE'
 LIBOPENSSL_SITE = 'https://www.openssl.org/source/openssl-1.1.1.tar.gz'
