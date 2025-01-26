@@ -9,7 +9,6 @@ on:
         options:
           - ''
           - brz
-          - bzr
           - cargo
           - git
           - gpsd
@@ -41,8 +40,6 @@ jobs:
             - { os:   macos-latest, python: "3.12", root_dir: minimal, cache: ~/Library/Caches/pip }
             - { os: windows-latest, python: "3.12", root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
 
-            # bzr example
-            - { os: ubuntu-latest, img: "python:2.7", python: "2.7", root_dir: bzr, cache: ~/.cache/pip }
 
             # cargo example
             - { os: ubuntu-latest, python: "3.12", root_dir: cargo, cache: ~/.cache/pip }
@@ -114,10 +111,6 @@ jobs:
         pip
         setuptools
         wheel
-    # dependencies (bzr)
-    - name: Install dependencies (bzr; ubuntu-latest)
-      run: apt update && apt-get install bzr --assume-yes
-      if: matrix.os == 'ubuntu-latest' && matrix.root_dir == 'bzr'
     # dependencies (cargo)
     - name: Install dependencies (cargo; ubuntu-latest)
       uses: actions-rust-lang/setup-rust-toolchain@v1
