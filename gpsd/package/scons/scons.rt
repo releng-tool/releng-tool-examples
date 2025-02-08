@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: 0BSD
 
 SCONS_INSTALL_TYPE = 'host'
+SCONS_PYTHON_DIST_PATH = 'build/dist'
 SCONS_PYTHON_SETUP_TYPE = 'setuptools'
 SCONS_SITE = 'https://github.com/SCons/scons/releases/download/${SCONS_VERSION}/SCons-${SCONS_VERSION}.tar.gz'
 SCONS_TYPE = 'python'
