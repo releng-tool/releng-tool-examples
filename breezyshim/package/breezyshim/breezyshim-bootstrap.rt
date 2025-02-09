@@ -1,6 +1,0 @@
-# SPDX-License-Identifier: 0BSD
-
-# setup create path for local package reference
-#libref = releng_join(OUTPUT_DIR, 'build', '.releng-tool-cargo-target', PKG_NAME)
-#print(BREEZYSHIM_BUILD_DIR, '->', libref)
-#releng_symlink(BREEZYSHIM_BUILD_DIR, libref)
