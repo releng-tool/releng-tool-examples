@@ -17,7 +17,8 @@ on:
           - minimal
           - nghttp2
           - pacman
-          - perforce-hms
+          # Perforced disabled for now since anonymous cloning no longer works.
+          # - perforce-hms
           - vulkan-samples
 
 jobs:
