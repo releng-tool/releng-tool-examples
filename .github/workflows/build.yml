@@ -17,7 +17,7 @@ on:
           - minimal
           - nghttp2
           - pacman
-          # Perforced disabled for now since anonymous cloning no longer works.
+          # Perforce disabled for now since anonymous cloning no longer works.
           # - perforce-hms
           - vulkan-samples
 
@@ -63,7 +63,7 @@ jobs:
             - { os: ubuntu-latest, python: "3.12", root_dir: pacman, cache: ~/.cache/pip }
 
             # perforce-hms example
-            - { os: ubuntu-latest, python: "3.12", root_dir: perforce-hms, cache: ~/.cache/pip }
+            # - { os: ubuntu-latest, python: "3.12", root_dir: perforce-hms, cache: ~/.cache/pip }
 
             # nghttp2 example
             - { os: ubuntu-latest, python: "3.12", root_dir: nghttp2, cache: ~/.cache/pip }
