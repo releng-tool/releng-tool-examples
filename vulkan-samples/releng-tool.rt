@@ -8,5 +8,8 @@ extra_licenses = {
     'NVIDIA-preprocessor': 'NVIDIA Preprocessor',
 }
 
+# for this example, generate all sbom types
+sbom_format = 'all'
+
 # project variable (shared with `releng-post`)
 EXAMPLE_VERSION = '0.1.0'
