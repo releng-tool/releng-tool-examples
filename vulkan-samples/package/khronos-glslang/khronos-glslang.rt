@@ -5,7 +5,7 @@ KHRONOS_GLSLANG_INSTALL_TYPE = 'staging'
 KHRONOS_GLSLANG_LICENSE = [
     'Apache-2.0',
     'BSD-2-Clause',
-    'BSD-2-Clause',
+    'BSD-3-Clause',
     'MIT',
     'NVIDIA-preprocessor',
 ]
