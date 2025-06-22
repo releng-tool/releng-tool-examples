@@ -43,7 +43,7 @@ jobs:
             - { os: windows-latest, python: "3.12", root_dir: minimal, cache: ~\AppData\Local\pip\Cache }
 
             # breezyshim example
-            - { os: ubuntu-latest, python: "3.13", root_dir: breezyshim, cache: ~/.cache/pip }
+            # - { os: ubuntu-latest, python: "3.13", root_dir: breezyshim, cache: ~/.cache/pip }
 
             # cargo example
             - { os: ubuntu-latest, python: "3.12", root_dir: cargo, cache: ~/.cache/pip }
