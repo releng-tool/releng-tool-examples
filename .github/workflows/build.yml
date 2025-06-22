@@ -8,7 +8,8 @@ on:
         description: Project to run
         options:
           - ''
-          - breezyshim
+          # Launchpad has limited availability.
+          # - breezyshim
           - cargo
           - git
           - gpsd
