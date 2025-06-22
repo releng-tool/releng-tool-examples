@@ -3,7 +3,3 @@
 packages = [
     'breezyshim-demo',
 ]
-
-quirks = [
-    'releng.disable_local_site_warn',
-]
