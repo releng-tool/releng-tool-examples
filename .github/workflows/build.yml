@@ -82,7 +82,7 @@ jobs:
         exit 1
 
     - name: Checkout sources
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Set up Python ${{ matrix.python }}
       if: ${{ matrix.img == '' }}
