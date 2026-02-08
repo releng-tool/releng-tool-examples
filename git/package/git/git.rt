@@ -10,10 +10,10 @@ GIT_NEEDS = [
 
 GIT_LICENSE = ['GPL-2.0-only', 'LGPL-2.1-or-later']
 GIT_LICENSE_FILES = ['COPYING', 'LGPL-2.1']
-GIT_REVISION = 'v2.19.1'
+GIT_REVISION = 'v2.53.0'
 GIT_SITE = 'https://github.com/git/git.git'
 GIT_TYPE = 'autotools'
-GIT_VERSION = '2.19.1'
+GIT_VERSION = '2.53.0'
 
 GIT_CONF_ENV = {
     'CURL_CONFIG': STAGING_DIR + '$PREFIX/bin/curl-config',
@@ -32,6 +32,5 @@ GIT_CONF_OPTS = [
     '--without-tcltk',
 ]
 
-# invoke autoreconf to handle patch:
-# 0001-build-link-with-curl-defined-linker-flags.patch
+# invoke autoreconf since ./configure is not provided via vcs
 GIT_AUTOTOOLS_AUTORECONF = True
