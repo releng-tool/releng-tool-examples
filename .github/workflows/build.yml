@@ -1,5 +1,8 @@
 name: Examples
 
+env:
+    RELENG_DELAYED_START: "1"
+
 on:
   workflow_dispatch:
     inputs:
